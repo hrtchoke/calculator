@@ -1,1 +1,1 @@
-# calculator
+# quote-generator
