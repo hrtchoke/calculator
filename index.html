@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+  <!--header-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-</head>e
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <!-- linking css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+ <!-- body -->
 <body>
-    
+  <!-- main border -->
+  <div class="main-container">
+    <!--calculator border -->
+    <div class="calc-container">
+      <div id="input" class="">
+      </div>
+      <div id='buttons-container'>
+        <!-- button declarations -->
+        <!--operations -->
+        <div class="btn btn-operator " onclick="clearInput(), resetCount()">C</div>
+        <div class="btn btn-operator " onclick="eraseNum(), resetCount()">⌦</div>
+        <div class="btn btn-operator " onclick="insertNum('/'), resetCount()">/</div>
+        <div class="btn btn-operator " onclick="insertNum('*'), resetCount()">x</div>
+        <!-- numbers-->
+        <div class="btn btn-num" onclick="insertNum(7), resetCount()">7</div>
+        <div class="btn btn-num" onclick="insertNum(8), resetCount()">8</div>
+        <div class="btn btn-num" onclick="insertNum(9), resetCount()">9</div>
+        <div class="btn btn-operator " onclick="insertNum('-'), resetCount()">-</div>
+        
+         <div class="btn btn-num" onclick="insertNum(4), resetCount()">4</div>
+         <div class="btn btn-num" onclick="insertNum(5), resetCount()">5</div>
+         <div class="btn btn-num" onclick="insertNum(6), resetCount()">6</div>
+         <div class="btn btn-operator " onclick="insertNum('+'), resetCount()">+</div>
+        
+         <div class="btn btn-num" onclick="insertNum(1), resetCount()">1</div>
+         <div class="btn btn-num" onclick="insertNum(2), resetCount()">2</div>
+         <div class="btn btn-num" onclick="insertNum(3), resetCount()">3</div>
+      <!--equal button with counter added for clearing on second click -->
+         <div class="btn btn-operator equal " onclick="equalTo(), buttonCount()">=</div>
+         <div class="btn btn-num dot" onclick="insertNum(0), resetCount()">0</div>
+         <div class="btn btn-num" onclick="insertNum('.'), resetCount()">.</div>
+    </div>
+    </div>
+ <!-- linking calculator script -->   
+<script type="text/javascript" src="script.js"></script>
+ 
 </body>
+ 
 </html>
